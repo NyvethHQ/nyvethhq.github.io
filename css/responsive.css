@@ -87,3 +87,29 @@
     font-size: 1.8rem;
   }
 }
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .badge-dot {
+    animation: none !important;
+  }
+
+  .featured-card:hover,
+  .pillar-card:hover,
+  .os-project-item:hover,
+  .contact-channel-card:hover,
+  .btn:hover {
+    transform: none !important;
+  }
+}
